@@ -16,11 +16,17 @@ def translatorNumber number
   doubleNumbers = ['ten','eleven','twelve', 'thirteen','fourteen','fivteen', 'sixteen','seventeen', 'eighteen','nineteen']
 
   if number.length < 2
-    puts "your number is single: " + singleNumbers[number.to_i]
-  elsif number.length == 2 || number.to_i < 20
-    puts "your number is duoble: " + doubleNumbers[number.to_i-10]
+    return singleNumbers[number.to_i]
+  elsif number.length == 2 and number.to_i < 20
+    return doubleNumbers[number.to_i-10]
+ elsif number.to_i >= 20 and number.to_i < 100
+   bigNumbers = ['twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety']
+   doubleNumber = number[0]
+   singleNumber = number[1]
+   numberAsString = bigNumbers[doubleNumber.to_i-2] + '-' + singleNumbers[singleNumber.to_i]
+   return numberAsString
   else
-    puts "Your number is big"
+    return "[[[[[[Your number is out of range]]]]]"
   end
 end
 
@@ -28,7 +34,6 @@ end
 puts centerText("==> Welcome to Translator numbers <==", sizeScreen)
 puts leftText("Please write the number in integers:", sizeScreen)
 number = gets.chomp
-translatorNumber(number)
-puts "Your number was "+ number
+puts number + " is spelling like: "+ translatorNumber(number)
 
 #1 = uno
