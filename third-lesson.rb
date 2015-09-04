@@ -6,3 +6,12 @@ if email['@']
 else
   puts "->You email is wrong<-"
 end
+
+
+cmd = ''
+
+while cmd !=  'bye'
+  puts "write some command"
+  command = gets.chomp
+  cmd  = command
+end
