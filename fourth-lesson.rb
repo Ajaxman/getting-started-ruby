@@ -30,3 +30,15 @@ puts "------->        <----------"
 web = [["jsp", "php", "ruby"], ["Angularjs", "Jquery"], ["R", "Erlang"]]
 
 puts web
+
+def myFirstProgram
+  puts "This is my first method"
+end
+
+myFirstProgram
+
+def mySecondProgram name
+  puts "Hello " + name
+end
+
+mySecondProgram "javier"
