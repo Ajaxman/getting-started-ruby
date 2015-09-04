@@ -1,7 +1,7 @@
 puts "What is your email address?"
 email = gets
 
-if email['@']
+if email['@'] and email['.']
   puts "[[[Your email is valid]]"
 else
   puts "->You email is wrong<-"
