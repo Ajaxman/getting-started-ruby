@@ -13,13 +13,23 @@ puts 5.to_spanish
 
 
 class Dado
+
+  def initialize
+    roll
+  end
   def roll
-    1 + rand(6)
+    @number = 1 + rand(6)
+  end
+
+  def show
+    @number
   end
 end
 
-dados = [Dado.new, Dado.new, Dado.new]
+dados = [Dado.new.show, Dado.new.show, Dado.new.show]
 
 dados.each do |dado|
-  puts dado.roll
+    puts "running dado..."
+    puts ".........."
+    puts dado
 end
